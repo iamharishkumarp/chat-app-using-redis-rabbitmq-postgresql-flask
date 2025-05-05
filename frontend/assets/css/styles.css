@@ -1,0 +1,145 @@
+/* Base Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Auth Pages */
+.auth-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Chat Interface */
+.chat-container {
+    display: flex;
+    height: 100vh;
+}
+
+.online-users {
+    /* width: 250px;
+    border-right: 1px solid #ddd; */
+    /* padding: 20px; */
+
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: white; /* Keep button background white */
+    border: 1px solid #ddd;
+    cursor: pointer;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.online-user {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background-color: white; /* White background */
+    border: 1px solid #ddd;
+    cursor: pointer;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    background-color: green; /* Green dot */
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+
+
+#chatHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#welcome-message {
+    color: #333;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+#welcome-message img {
+    width: 30px; /* Adjust size of the profile pic */
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px; /* Space between the profile pic and username */
+}
+
+#logged-in-user {
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+.chat-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.chat-input {
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+/* Message Bubbles */
+.message {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 70%;
+}
+
+.message.self {
+    background: #e3f2fd;
+    margin-left: auto;
+}
+
+.message.other {
+    background: #f5f5f5;
+}
+
+#back-to-public-chat {
+    background-color: #dc3545; /* Same as Logout */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#back-to-public-chat:hover {
+    background-color: #c82333; /* Darker red */
+}
