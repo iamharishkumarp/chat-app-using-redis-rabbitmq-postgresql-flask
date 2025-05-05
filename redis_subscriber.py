@@ -3,17 +3,14 @@ from database import redis_client
 def message_handler(message):
     try:
         data = message["data"]
-        
         # Ensure it's a string, not JSON
         if isinstance(data, str):  
             print(f"New Public Message: {data}")
         else:
             print(f"Unexpected message format: {data}")
-
     except Exception as e:
         print(f"Error processing message: {e}")
 
-# Subscribe to 'general' channel
 pubsub = redis_client.pubsub()
 pubsub.subscribe(**{"general": message_handler})
 
